@@ -2,21 +2,30 @@ import { useState } from "react";
 import Signin from "./Signin";
 
 const Signup=()=> {
-    const[signup,setsignup]=useState(false);
-    const[name,setname]=useState("");
+    const[signup,setSignup]=useState(false);
+    const[name,setName]=useState("");
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
 
-    // const handlebtn={
-    //     setsignup(!signup);
-    // }
+    const handleToggle=()=>{
+        setSignup(!signup);
+    }
     
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        if (signup){
+            console.log("Signup",{name,email,password});
+        }
+        else{
+            console.log("Sigin",{email,password});
+        }
+    }
 
 
   return (
     <div>
         {signup ? Signup : Signin}
-        <form className="">
+        <form onSubmit={handleSubmit} className="">
             {signup && (
                 <input
                     type="text"
@@ -24,7 +33,7 @@ const Signup=()=> {
                     id="username"
                     className="border p-3 rounded-lg"
                     onChange={(e)=>{
-                        setname(e.target.value)
+                        setName(e.target.value)
                     }}
                 />
             )}
@@ -53,7 +62,7 @@ const Signup=()=> {
             </button>
             <div>
                 <p>{signup ? "Already have an account" : "Don't have an account"}?</p>
-                <button className="text-blue-700" >{signup ? "signin" : "signup"}</button>
+                <button className="text-blue-700" onClick={handleToggle}>{signup ? "Signin" : "Signup"}</button>
             </div>
         </form>
     </div>
