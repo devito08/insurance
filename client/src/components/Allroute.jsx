@@ -5,6 +5,8 @@ import Signin from './Signin'
 import Insurancetype from './Insurancetype'
 import Car from './Car'
 import Family from './Family'
+import Homeinsurance from './Homeinsurance'
+import Travels from './Travels'
 
 
 function Allroute() {
@@ -16,6 +18,8 @@ function Allroute() {
         <Route path='/insurancetype' element={<Insurancetype/>}/>
         <Route path='/vehicle' element={<Car/>}/>
         <Route path='/family' element={<Family/>}/>
+        <Route path='/home-insurance' element={<Homeinsurance/>}/>
+        <Route path='/travel' element={<Travels/>}/>
     </Routes>
   )
 }

@@ -44,7 +44,9 @@ function Insurancetype() {
                 <div className="px-6 py-4">
                     <h3 className="font-bold text-xl mb-2">Home Insurance</h3>
                     <p className="text-gray-700 text-base">Take home insurance and we protect your house.</p>
+                    <Link to='/home-insurance'>
                     <button className="bg-indigo-300 hover:bg-green-400 text-white rounded-full px-4 py-2 mt-2">START&#10132;</button>
+                    </Link>
                 </div>
             </div>
 
@@ -54,7 +56,9 @@ function Insurancetype() {
                 <div className="px-6 py-4">
                     <h3 className="font-bold text-xl mb-2">Travel Insurance</h3>
                     <p className="text-gray-700 text-base">Take a travel insurance and enjoy the secured tour.</p>
+                    <Link to="/travel">
                     <button className="bg-indigo-300 hover:bg-green-400 text-white rounded-full px-4 py-2 mt-2">START&#10132;</button>
+                    </Link>
                 </div>
             </div>
 
