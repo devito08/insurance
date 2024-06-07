@@ -15,8 +15,11 @@ function Insurancetype() {
                     <p className="text-gray-700 text-base">
                         Take family insurance and secure the family members.
                     </p>
+                    <Link to="/family">
+                    
                     <button className="bg-indigo-300 text-white hover:bg-green-400 px-4 py-2 rounded-full mt-2">START&#10132;</button>
 
+                    </Link>
 
                 </div>
             </div>
